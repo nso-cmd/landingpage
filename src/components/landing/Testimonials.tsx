@@ -1,9 +1,10 @@
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Mariana Castro", role: "Consultora de carreira", text: "Em 60 dias dobrei meu engajamento e fechei 3 contratos premium aplicando o método. Vale 10x o preço." },
-  { name: "Rafael Lima", role: "Criador de conteúdo", text: "Finalmente entendi como transformar meu conhecimento em produto. Saí da estagnação e estruturei uma esteira de receita." },
-  { name: "Juliana Prado", role: "Mentora de negócios", text: "O ebook mais direto e estratégico que já li sobre crescimento digital. Sem enrolação, só o que funciona." },
+  { name: "Lucas M.", text: "Eu consumia muito conteúdo sobre marketing digital, mas nunca conseguia colocar em prática. O ebook me ajudou a organizar minhas ideias e finalmente criar um plano." },
+  { name: "Fernanda R.", text: "A leitura é simples e objetiva. Em poucos dias já consegui enxergar oportunidades que eu não estava percebendo." },
+  { name: "Guilherme S.", text: "Gostei porque não é um material cheio de teoria. Dá para aplicar imediatamente." },
+  { name: "Camila A.", text: "Comprei esperando algumas dicas e recebi um verdadeiro mapa para organizar minha presença digital." },
 ];
 
 export const Testimonials = () => (
@@ -13,16 +14,16 @@ export const Testimonials = () => (
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Depoimentos</p>
         <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold">Quem aplicou, transformou</h2>
       </div>
-      <div className="mt-14 grid md:grid-cols-3 gap-6">
+      <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {testimonials.map((t) => (
           <figure key={t.name} className="p-8 rounded-2xl bg-card-gradient gold-border flex flex-col">
             <div className="flex gap-1 mb-4">
               {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
             </div>
-            <blockquote className="text-foreground/90 italic">"{t.text}"</blockquote>
+            <blockquote className="text-foreground/90 italic text-sm leading-relaxed">"{t.text}"</blockquote>
             <figcaption className="mt-6 pt-6 border-t border-border">
               <div className="font-display text-lg">{t.name}</div>
-              <div className="text-xs text-muted-foreground">{t.role}</div>
+              <div className="text-xs text-muted-foreground">Leitor verificado</div>
             </figcaption>
           </figure>
         ))}

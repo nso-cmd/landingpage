@@ -5,23 +5,30 @@ import { Button } from "@/components/ui/button";
 type Msg = { from: "bot" | "user"; text: string };
 
 const quickQuestions = [
-  "O que tem dentro do ebook?",
-  "Para quem é indicado?",
-  "Como funciona a garantia?",
-  "Quais as formas de pagamento?",
+  "O que vou aprender?",
+  "Para quem é?",
+  "Quanto custa?",
+  "Como recebo?",
+  "Tem garantia?",
 ];
 
 const answers: Record<string, string> = {
-  "O que tem dentro do ebook?": "São 6 módulos sobre posicionamento, crescimento orgânico, copy que converte, marca pessoal premium, audiência engajada e monetização — com frameworks prontos.",
-  "Para quem é indicado?": "Criadores, consultores, especialistas e empreendedores digitais que querem transformar conhecimento em autoridade e renda recorrente.",
-  "Como funciona a garantia?": "Você tem 7 dias para testar. Se não gostar, devolvemos 100% do valor — sem perguntas.",
-  "Quais as formas de pagamento?": "Aceitamos Pix, cartão de crédito em até 12x e boleto. Pagamento 100% seguro.",
+  "O que vou aprender?":
+    "Você vai aprender o mapa completo para transformar conhecimento em autoridade, audiência e renda digital — posicionamento, conteúdo estratégico, crescimento orgânico e monetização. Tudo aplicável imediatamente.",
+  "Para quem é?":
+    "O ebook foi criado para criadores de conteúdo, especialistas, autônomos, afiliados, infoprodutores e qualquer pessoa que queira construir autoridade e gerar oportunidades através da internet.",
+  "Quanto custa?":
+    "Hoje, o pacote completo (ebook + 4 bônus, valor total de R$ 239) sai por apenas R$ 39,90 — em até 12x no cartão ou Pix com acesso imediato.",
+  "Como recebo?":
+    "O acesso é enviado por e-mail imediatamente após a confirmação do pagamento, em PDF de alta qualidade. Você pode ler no celular, tablet ou computador.",
+  "Tem garantia?":
+    "Sim. Você possui 7 dias de garantia para solicitar reembolso caso o material não atenda às suas expectativas.",
 };
 
 export const Chatbot = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
-    { from: "bot", text: "Olá! Posso ajudar você a descobrir se este ebook é ideal para o seu crescimento digital." },
+    { from: "bot", text: "Olá! 👋 Posso ajudar você a descobrir se o Mapa do Crescimento Digital é ideal para o seu momento." },
   ]);
   const [input, setInput] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
