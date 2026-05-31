@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Star, Lock } from "lucide-react";
 import ebookCover from "@/assets/ebook-cover.png";
+import { CHECKOUT_URL } from "@/config/checkout";
 
 export const Hero = () => {
   return (
@@ -21,30 +22,30 @@ export const Hero = () => {
         <div className="animate-fade-up">
           <div className="inline-flex items-center gap-2 rounded-full gold-border bg-card/50 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-widest text-gold">
             <Star className="h-3.5 w-3.5 fill-gold text-gold" />
-            Best-seller digital 2026
+            Sistema completo de crescimento digital
           </div>
-          <h1 className="mt-6 font-display text-4xl md:text-6xl leading-[1.05] font-bold">
-            Transforme conhecimento em <span className="text-gradient-gold">influência e renda digital</span>
+          <h1 className="mt-6 font-display text-4xl md:text-[3.4rem] leading-[1.05] font-bold">
+            Transforme seu conhecimento em <span className="text-gradient-gold">autoridade, audiência e renda digital</span> — mesmo começando do zero.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-            O guia estratégico definitivo para criadores, especialistas e consultores que querem escalar autoridade,
-            audiência e faturamento online — sem achismo.
+            Descubra o passo a passo utilizado para construir uma presença digital que gera influência,
+            oportunidades e crescimento real.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Button size="lg" variant="hero" className="text-base" onClick={() => document.getElementById("comprar")?.scrollIntoView({ behavior: "smooth" })}>
-              Quero meu Ebook Agora
+            <Button size="xl" variant="hero" asChild>
+              <a href={CHECKOUT_URL}>Quero Meu Ebook Agora</a>
             </Button>
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
               <ShieldCheck className="h-5 w-5 text-gold" />
-              Garantia incondicional de 7 dias
+              Pagamento protegido · Garantia de 7 dias
             </div>
           </div>
 
           <div className="mt-10 flex items-center gap-6 text-xs text-muted-foreground">
             <div className="flex items-center gap-1">
               {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
-              <span className="ml-2">4.9/5 · +2.300 leitores</span>
+              <span className="ml-2">Centenas de leitores aplicando o método</span>
             </div>
           </div>
         </div>
