@@ -8,35 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark luxury palette: deep navy + gold */
+    --background: 222 47% 7%;
+    --foreground: 40 30% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 40% 11%;
+    --card-foreground: 40 30% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 45% 9%;
+    --popover-foreground: 40 30% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 42 65% 55%;            /* gold */
+    --primary-foreground: 222 47% 8%;
+    --primary-glow: 42 90% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222 40% 14%;
+    --secondary-foreground: 40 30% 96%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 222 30% 16%;
+    --muted-foreground: 220 15% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 28 75% 50%;              /* copper */
+    --accent-foreground: 40 30% 96%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 40 30% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 222 30% 20%;
+    --input: 222 30% 18%;
+    --ring: 42 65% 55%;
 
-    --radius: 0.5rem;
+    --navy-deep: 222 60% 6%;
+    --navy: 222 50% 10%;
+    --gold: 42 65% 55%;
+    --gold-soft: 42 80% 70%;
+    --copper: 28 75% 50%;
+
+    --gradient-hero: radial-gradient(ellipse at top, hsl(222 55% 14%) 0%, hsl(222 60% 6%) 60%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 80% 65%), hsl(28 75% 50%));
+    --gradient-card: linear-gradient(160deg, hsl(222 40% 13%) 0%, hsl(222 50% 9%) 100%);
+
+    --shadow-gold: 0 20px 60px -20px hsl(42 80% 50% / 0.45);
+    --shadow-elegant: 0 30px 80px -30px hsl(0 0% 0% / 0.7);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +116,27 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01';
   }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-hero { background: var(--gradient-hero); }
+  .bg-gold-gradient { background: var(--gradient-gold); }
+  .bg-card-gradient { background: var(--gradient-card); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .gold-border { border: 1px solid hsl(var(--gold) / 0.3); }
 }
