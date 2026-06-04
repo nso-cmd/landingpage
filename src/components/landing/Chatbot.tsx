@@ -78,16 +78,20 @@ export const Chatbot = () => {
               </div>
             ))}
 
-            {messages.length <= 2 && (
-              <div className="pt-2 space-y-2">
-                <p className="text-xs text-muted-foreground">Perguntas rápidas:</p>
+            <div className="pt-2 space-y-2">
+              <p className="text-xs text-muted-foreground">Perguntas rápidas:</p>
+              <div className="grid grid-cols-1 gap-2">
                 {quickQuestions.map((q) => (
-                  <button key={q} onClick={() => send(q)} className="block w-full text-left text-xs px-3 py-2 rounded-lg gold-border hover:bg-gold/10 transition-colors">
+                  <button
+                    key={q}
+                    onClick={() => send(q)}
+                    className="text-left text-xs px-3 py-2 rounded-lg gold-border hover:bg-gold/10 hover:border-gold/60 transition-all"
+                  >
                     {q}
                   </button>
                 ))}
               </div>
-            )}
+            </div>
           </div>
 
           <form
