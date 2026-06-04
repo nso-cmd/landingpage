@@ -10,6 +10,7 @@ const quickQuestions = [
   "Quanto custa?",
   "Como recebo?",
   "Tem garantia?",
+  "Como funciona a compra?",
 ];
 
 const answers: Record<string, string> = {
@@ -23,6 +24,8 @@ const answers: Record<string, string> = {
     "O acesso é enviado por e-mail imediatamente após a confirmação do pagamento, em PDF de alta qualidade. Você pode ler no celular, tablet ou computador.",
   "Tem garantia?":
     "Sim. Você possui 7 dias de garantia para solicitar reembolso caso o material não atenda às suas expectativas.",
+  "Como funciona a compra?":
+    "Clique em 'Quero Meu Ebook Agora', finalize seu pagamento via Pix, Cartão ou Boleto em ambiente 100% seguro, e receba o acesso digital imediatamente após a confirmação.",
 };
 
 export const Chatbot = () => {
