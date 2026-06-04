@@ -9,10 +9,13 @@ export const Guarantee = () => (
           <ShieldCheck className="h-14 w-14 text-navy-deep" />
         </div>
         <div className="relative text-center md:text-left">
-          <h3 className="font-display text-2xl md:text-3xl font-bold">Garantia incondicional de 7 dias</h3>
+          <p className="text-gold uppercase tracking-[0.3em] text-xs">Garantia</p>
+          <h3 className="mt-2 font-display text-2xl md:text-3xl font-bold">
+            Risco Zero <span className="text-gradient-gold">para Você</span>
+          </h3>
           <p className="mt-3 text-muted-foreground">
-            Leia o ebook, aplique as estratégias e, se por qualquer motivo não enxergar valor,
-            devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.
+            Experimente o conteúdo por 7 dias. Caso não fique satisfeito, solicite o reembolso
+            dentro do prazo — devolvemos 100% do seu investimento, sem perguntas e sem burocracia.
           </p>
         </div>
       </div>
