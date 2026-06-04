@@ -11,15 +11,19 @@ import { Chatbot } from "@/components/landing/Chatbot";
 import { Offer } from "@/components/landing/Offer";
 import { Authority } from "@/components/landing/Authority";
 import { StickyCTA } from "@/components/landing/StickyCTA";
+import { InlineCTA } from "@/components/landing/InlineCTA";
 
 const Index = () => (
   <main className="min-h-screen bg-background text-foreground">
     <Hero />
     <WhatYouLearn />
     <Benefits />
+    <InlineCTA eyebrow="Comece hoje" />
     <Authority />
     <Offer />
+    <InlineCTA eyebrow="Oferta por tempo limitado" />
     <Testimonials />
+    <InlineCTA eyebrow="Junte-se a quem já aplica" />
     <Guarantee />
     <Author />
     <FAQ />

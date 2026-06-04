@@ -11,9 +11,9 @@ export const Footer = () => (
       <div>
         <h4 className="font-display text-base mb-3 text-gold">Institucional</h4>
         <ul className="space-y-2 text-muted-foreground">
-          <li><a href="#" className="hover:text-gold transition-colors">Política de Privacidade</a></li>
-          <li><a href="#" className="hover:text-gold transition-colors">Termos de Uso</a></li>
-          <li><a href="#" className="hover:text-gold transition-colors">Política de Reembolso</a></li>
+          <li><a href="#comprar" className="hover:text-gold transition-colors">Quero o ebook</a></li>
+          <li><a href="mailto:contato@mapadigital.com.br" className="hover:text-gold transition-colors">Política de Privacidade</a></li>
+          <li><a href="mailto:contato@mapadigital.com.br" className="hover:text-gold transition-colors">Política de Reembolso</a></li>
         </ul>
       </div>
       <div>

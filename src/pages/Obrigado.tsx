@@ -15,10 +15,10 @@ const Obrigado = () => (
         <CheckCircle2 className="h-10 w-10 text-navy-deep" />
       </div>
       <h1 className="mt-8 font-display text-4xl md:text-5xl font-bold">
-        Sua compra foi <span className="text-gradient-gold">confirmada</span>!
+        Parabéns pela sua <span className="text-gradient-gold">decisão</span>.
       </h1>
-      <p className="mt-4 text-muted-foreground">
-        Bem-vindo à comunidade do Mapa do Crescimento Digital. Agora é hora de aplicar.
+      <p className="mt-4 text-lg text-muted-foreground">
+        Seu acesso já está sendo preparado.
       </p>
 
       <div className="mt-12 grid md:grid-cols-3 gap-4 text-left">

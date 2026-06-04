@@ -10,6 +10,7 @@ const quickQuestions = [
   "Quanto custa?",
   "Como recebo?",
   "Tem garantia?",
+  "Como funciona a compra?",
 ];
 
 const answers: Record<string, string> = {
@@ -23,6 +24,8 @@ const answers: Record<string, string> = {
     "O acesso é enviado por e-mail imediatamente após a confirmação do pagamento, em PDF de alta qualidade. Você pode ler no celular, tablet ou computador.",
   "Tem garantia?":
     "Sim. Você possui 7 dias de garantia para solicitar reembolso caso o material não atenda às suas expectativas.",
+  "Como funciona a compra?":
+    "Clique em 'Quero Meu Ebook Agora', finalize seu pagamento via Pix, Cartão ou Boleto em ambiente 100% seguro, e receba o acesso digital imediatamente após a confirmação.",
 };
 
 export const Chatbot = () => {
@@ -75,16 +78,20 @@ export const Chatbot = () => {
               </div>
             ))}
 
-            {messages.length <= 2 && (
-              <div className="pt-2 space-y-2">
-                <p className="text-xs text-muted-foreground">Perguntas rápidas:</p>
+            <div className="pt-2 space-y-2">
+              <p className="text-xs text-muted-foreground">Perguntas rápidas:</p>
+              <div className="grid grid-cols-1 gap-2">
                 {quickQuestions.map((q) => (
-                  <button key={q} onClick={() => send(q)} className="block w-full text-left text-xs px-3 py-2 rounded-lg gold-border hover:bg-gold/10 transition-colors">
+                  <button
+                    key={q}
+                    onClick={() => send(q)}
+                    className="text-left text-xs px-3 py-2 rounded-lg gold-border hover:bg-gold/10 hover:border-gold/60 transition-all"
+                  >
                     {q}
                   </button>
                 ))}
               </div>
-            )}
+            </div>
           </div>
 
           <form
