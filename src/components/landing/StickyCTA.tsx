@@ -38,7 +38,10 @@ export const StickyCTA = () => {
           </div>
         </div>
         <Button size="default" variant="hero" className="ml-auto shrink-0 text-xs px-3 sm:text-base sm:px-6" asChild>
-          <a href={CHECKOUT_URL}>Comprar</a>
+          <a href={CHECKOUT_URL}>
+            <span className="sm:hidden">Quero agora</span>
+            <span className="hidden sm:inline">Quero Meu Ebook Agora</span>
+          </a>
         </Button>
       </div>
     </div>
