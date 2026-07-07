@@ -1,5 +1,5 @@
 export const Author = () => (
-  <section className="py-24 bg-navy-deep">
+  <section className="py-16 md:py-24 bg-navy-deep">
     <div className="container mx-auto grid md:grid-cols-[260px_1fr] gap-12 items-center max-w-4xl">
       <div className="relative mx-auto">
         <div className="absolute inset-0 bg-gold-gradient blur-2xl opacity-30 rounded-full" />
@@ -9,7 +9,7 @@ export const Author = () => (
       </div>
       <div>
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Sobre o autor</p>
-        <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold">[Nome do Autor]</h2>
+        <h2 className="mt-3 font-display text-2xl md:text-4xl font-bold">[Nome do Autor]</h2>
         <p className="mt-5 text-muted-foreground leading-relaxed">
           Especialista em estratégia digital e marca pessoal, com mais de uma década ajudando criadores,
           consultores e empreendedores a transformar conhecimento em autoridade e renda recorrente.

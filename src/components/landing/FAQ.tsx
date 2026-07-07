@@ -9,11 +9,11 @@ const faqs = [
 ];
 
 export const FAQ = () => (
-  <section className="py-24 bg-navy-deep">
+  <section className="py-16 md:py-24 bg-navy-deep">
     <div className="container mx-auto max-w-3xl">
       <div className="text-center">
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Dúvidas</p>
-        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold">Perguntas frequentes</h2>
+        <h2 className="mt-4 font-display text-2xl md:text-5xl font-bold">Perguntas frequentes</h2>
       </div>
       <Accordion type="single" collapsible className="mt-12 space-y-3">
         {faqs.map((f, i) => (

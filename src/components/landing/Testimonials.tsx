@@ -8,11 +8,11 @@ const testimonials = [
 ];
 
 export const Testimonials = () => (
-  <section className="py-24">
+  <section className="py-16 md:py-24">
     <div className="container mx-auto">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Depoimentos</p>
-        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold">Quem aplicou, transformou</h2>
+        <h2 className="mt-4 font-display text-2xl md:text-5xl font-bold">Quem aplicou, transformou</h2>
       </div>
       <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {testimonials.map((t) => (

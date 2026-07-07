@@ -12,13 +12,13 @@ const stack = [
 ];
 
 export const Offer = () => (
-  <section id="comprar" className="py-24 bg-hero relative overflow-hidden">
+  <section id="comprar" className="py-16 md:py-24 bg-hero relative overflow-hidden">
     <div className="absolute inset-0 opacity-40"
       style={{ backgroundImage: "radial-gradient(circle at 50% 30%, hsl(var(--gold) / 0.18), transparent 60%)" }} />
     <div className="container mx-auto relative max-w-6xl">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Oferta completa</p>
-        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold">
+        <h2 className="mt-4 font-display text-2xl md:text-5xl font-bold">
           Um <span className="text-gradient-gold">sistema completo</span> de crescimento digital
         </h2>
         <p className="mt-4 text-muted-foreground">
