@@ -3,9 +3,9 @@ import { CHECKOUT_URL, PRICE } from "@/config/checkout";
 import { Lock, ShieldCheck, CreditCard, BadgeCheck } from "lucide-react";
 
 export const FinalCTA = () => (
-  <section className="py-20 bg-hero">
+  <section className="py-16 md:py-20 bg-hero">
     <div className="container mx-auto max-w-3xl text-center">
-      <h2 className="font-display text-3xl md:text-5xl font-bold">
+      <h2 className="font-display text-2xl md:text-5xl font-bold">
         Seu próximo nível começa <span className="text-gradient-gold">hoje</span>
       </h2>
       <p className="mt-4 text-muted-foreground">

@@ -24,10 +24,10 @@ export const Hero = () => {
             <Star className="h-3.5 w-3.5 fill-gold text-gold" />
             Sistema completo de crescimento digital
           </div>
-          <h1 className="mt-6 font-display text-4xl md:text-[3.4rem] leading-[1.05] font-bold">
+          <h1 className="mt-6 font-display text-[1.75rem] sm:text-4xl md:text-[3.4rem] leading-[1.1] md:leading-[1.05] font-bold">
             Transforme seu conhecimento em <span className="text-gradient-gold">autoridade, audiência e renda digital</span> — mesmo começando do zero.
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+          <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl">
             Descubra o passo a passo utilizado para construir uma presença digital que gera influência,
             oportunidades e crescimento real.
           </p>
@@ -57,7 +57,7 @@ export const Hero = () => {
             alt="Capa do ebook O Mapa do Crescimento Digital"
             width={1024}
             height={1536}
-            className="relative max-h-[560px] w-auto animate-float drop-shadow-2xl"
+            className="relative max-h-[380px] sm:max-h-[480px] md:max-h-[560px] w-auto animate-float drop-shadow-2xl"
           />
         </div>
       </div>

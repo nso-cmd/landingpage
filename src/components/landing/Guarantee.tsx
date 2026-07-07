@@ -1,7 +1,7 @@
 import { ShieldCheck } from "lucide-react";
 
 export const Guarantee = () => (
-  <section className="py-20">
+  <section className="py-14 md:py-20">
     <div className="container mx-auto max-w-4xl">
       <div className="relative overflow-hidden rounded-3xl bg-card-gradient gold-border p-10 md:p-14 flex flex-col md:flex-row items-center gap-10">
         <div className="absolute -top-20 -right-20 h-60 w-60 bg-gold-gradient rounded-full blur-3xl opacity-20" />
