@@ -16,16 +16,16 @@ const triggers = [
 ];
 
 export const Authority = () => (
-  <section className="py-24 bg-navy-deep">
+  <section className="py-16 md:py-24 bg-navy-deep">
     <div className="container mx-auto max-w-5xl">
-      <div className="relative overflow-hidden rounded-3xl bg-card-gradient gold-border p-10 md:p-14">
+      <div className="relative overflow-hidden rounded-3xl bg-card-gradient gold-border p-6 md:p-14">
         <div className="absolute -top-24 -right-24 h-72 w-72 bg-gold-gradient rounded-full blur-3xl opacity-20" />
-        <div className="relative grid md:grid-cols-2 gap-10">
+        <div className="relative grid md:grid-cols-2 gap-8 md:gap-10">
           <div>
             <div className="inline-flex items-center gap-2 text-gold text-xs uppercase tracking-[0.3em]">
               <Sparkles className="h-4 w-4" /> Por que confiar
             </div>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold">
+            <h2 className="mt-4 font-display text-2xl md:text-4xl font-bold">
               Um método estruturado para <span className="text-gradient-gold">resultados reais</span>
             </h2>
             <ul className="mt-6 space-y-3">
