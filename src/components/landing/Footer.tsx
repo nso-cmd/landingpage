@@ -1,9 +1,11 @@
+import brandCompass from "@/assets/brand-compass.png";
+
 export const Footer = () => (
   <footer className="border-t border-border bg-navy-deep">
     <div className="container mx-auto py-12 grid md:grid-cols-3 gap-8 text-sm">
       <div>
         <div className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-lg bg-gold-gradient flex items-center justify-center font-display text-navy-deep font-bold">M</div>
+          <img src={brandCompass} alt="Mapa Digital" width={40} height={40} loading="lazy" className="h-10 w-10 object-contain" />
           <span className="font-display text-lg">Mapa Digital</span>
         </div>
         <p className="mt-4 text-muted-foreground">Estratégia digital para quem quer transformar conhecimento em legado.</p>
