@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Star, Lock } from "lucide-react";
 import ebookCover from "@/assets/ebook-cover.png";
+import brandCompass from "@/assets/brand-compass.png";
 import { CHECKOUT_URL } from "@/config/checkout";
 
 export const Hero = () => {
@@ -10,7 +11,7 @@ export const Hero = () => {
         style={{ backgroundImage: "radial-gradient(circle at 20% 20%, hsl(var(--gold) / 0.18), transparent 40%), radial-gradient(circle at 80% 60%, hsl(var(--copper) / 0.15), transparent 45%)" }} />
       <nav className="relative z-10 container mx-auto flex items-center justify-between py-6">
         <div className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-lg bg-gold-gradient flex items-center justify-center font-display text-navy-deep font-bold">M</div>
+          <img src={brandCompass} alt="Mapa Digital" width={40} height={40} className="h-10 w-10 object-contain" />
           <span className="font-display text-lg tracking-wide">Mapa Digital</span>
         </div>
         <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
