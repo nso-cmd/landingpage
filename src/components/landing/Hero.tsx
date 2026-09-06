@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Star, Lock } from "lucide-react";
 import ebookCover from "@/assets/ebook-cover.png";
+import brandCompass from "@/assets/brand-compass.png";
 import { CHECKOUT_URL } from "@/config/checkout";
 
 export const Hero = () => {
