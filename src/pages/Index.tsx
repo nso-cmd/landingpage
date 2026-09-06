@@ -1,7 +1,7 @@
 import { Hero } from "@/components/landing/Hero";
 import { WhatYouLearn } from "@/components/landing/WhatYouLearn";
 import { Benefits } from "@/components/landing/Benefits";
-import { Author } from "@/components/landing/Author";
+
 import { Testimonials } from "@/components/landing/Testimonials";
 import { FAQ } from "@/components/landing/FAQ";
 import { Guarantee } from "@/components/landing/Guarantee";
@@ -25,7 +25,7 @@ const Index = () => (
     <Testimonials />
     <InlineCTA eyebrow="Junte-se a quem já aplica" />
     <Guarantee />
-    <Author />
+    
     <FAQ />
     <FinalCTA />
     <Footer />
