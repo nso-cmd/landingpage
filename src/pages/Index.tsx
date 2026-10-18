@@ -7,7 +7,6 @@ import { FAQ } from "@/components/landing/FAQ";
 import { Guarantee } from "@/components/landing/Guarantee";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { Footer } from "@/components/landing/Footer";
-import { Chatbot } from "@/components/landing/Chatbot";
 import { Offer } from "@/components/landing/Offer";
 import { Authority } from "@/components/landing/Authority";
 import { StickyCTA } from "@/components/landing/StickyCTA";
@@ -30,7 +29,6 @@ const Index = () => (
     <FinalCTA />
     <Footer />
     <StickyCTA />
-    <Chatbot />
   </main>
 );
 
