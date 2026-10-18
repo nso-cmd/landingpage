@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PRICE } from "@/config/checkout";
 
 type Msg = { from: "bot" | "user"; text: string };
 
@@ -19,7 +20,7 @@ const answers: Record<string, string> = {
   "Para quem é?":
     "O ebook foi criado para criadores de conteúdo, especialistas, autônomos, afiliados, infoprodutores e qualquer pessoa que queira construir autoridade e gerar oportunidades através da internet.",
   "Quanto custa?":
-    "Hoje, o pacote completo (ebook + 4 bônus, valor total de R$ 239) sai por apenas R$ 39,90 — em até 12x no cartão ou Pix com acesso imediato.",
+    `Hoje, o pacote completo (ebook + 4 bônus, valor total de ${PRICE.full}) sai por apenas ${PRICE.today}. Pague via Pix, cartão ou boleto; o acesso é enviado após a confirmação do pagamento.`,
   "Como recebo?":
     "O acesso é enviado por e-mail imediatamente após a confirmação do pagamento, em PDF de alta qualidade. Você pode ler no celular, tablet ou computador.",
   "Tem garantia?":
@@ -47,29 +48,33 @@ export const Chatbot = () => {
     setInput("");
     setTimeout(() => {
       const reply = answers[text] ||
-        "Ótima pergunta! Nossa equipe responde em instantes — enquanto isso, garanta seu acesso pelo botão 'Quero meu Ebook Agora'. Posso ajudar com mais alguma coisa?";
+        "Sou um assistente automático e posso responder às perguntas abaixo sobre conteúdo, preço, entrega, compra e garantia. Escolha uma delas para continuar.";
       setMessages((m) => [...m, { from: "bot", text: reply }]);
     }, 700);
   };
 
   return (
     <>
-      <button
+      <Button
+        variant="hero"
+        size="icon"
         onClick={() => setOpen((o) => !o)}
-        aria-label="Abrir chat"
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-gold-gradient text-navy-deep shadow-gold flex items-center justify-center hover:scale-110 transition-transform animate-glow-pulse"
+        aria-label={open ? "Fechar chat" : "Abrir chat"}
+        aria-expanded={open}
+        aria-controls="mapa-chat"
+        className="fixed bottom-[calc(6rem+env(safe-area-inset-bottom))] right-4 sm:bottom-24 sm:right-6 z-50 h-12 w-12 rounded-full"
       >
         {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
-      </button>
+      </Button>
 
       {open && (
-        <div className="fixed bottom-24 right-6 z-50 w-[92vw] max-w-sm rounded-2xl bg-card gold-border shadow-elegant overflow-hidden animate-fade-up flex flex-col" style={{ height: "min(560px, 75vh)" }}>
-          <div className="p-4 bg-gold-gradient text-navy-deep">
+        <div id="mapa-chat" role="dialog" aria-label="Atendimento Mapa Digital" className="fixed bottom-[calc(9.5rem+env(safe-area-inset-bottom))] right-4 sm:right-6 z-50 w-[calc(100%-2rem)] max-w-sm h-[min(560px,calc(100dvh-11rem))] rounded-lg bg-card gold-border shadow-elegant overflow-hidden animate-fade-up flex flex-col">
+          <div className="p-4 bg-gold-gradient text-navy-deep shrink-0">
             <div className="font-display font-bold">Atendimento Mapa Digital</div>
-            <div className="text-xs opacity-80">Online · Responde em instantes</div>
+            <div className="text-xs opacity-80">Assistente virtual</div>
           </div>
 
-          <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 space-y-3" aria-live="polite">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}>
                 <div className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${m.from === "user" ? "bg-gold text-navy-deep" : "bg-muted text-foreground"}`}>
@@ -82,13 +87,14 @@ export const Chatbot = () => {
               <p className="text-xs text-muted-foreground">Perguntas rápidas:</p>
               <div className="grid grid-cols-1 gap-2">
                 {quickQuestions.map((q) => (
-                  <button
+                  <Button
+                    variant="outline"
                     key={q}
                     onClick={() => send(q)}
-                    className="text-left text-xs px-3 py-2 rounded-lg gold-border hover:bg-gold/10 hover:border-gold/60 transition-all"
+                    className="justify-start h-auto min-h-11 whitespace-normal text-left text-sm px-3 py-2 rounded-lg gold-border bg-transparent hover:bg-gold/10 hover:text-foreground"
                   >
                     {q}
-                  </button>
+                  </Button>
                 ))}
               </div>
             </div>
@@ -96,15 +102,16 @@ export const Chatbot = () => {
 
           <form
             onSubmit={(e) => { e.preventDefault(); send(input); }}
-            className="p-3 border-t border-border flex gap-2"
+            className="p-3 border-t border-border flex gap-2 shrink-0"
           >
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Escreva sua dúvida..."
-              className="flex-1 bg-muted text-sm rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-gold"
+              aria-label="Sua dúvida"
+              className="flex-1 min-w-0 bg-muted text-base rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-gold"
             />
-            <Button type="submit" size="icon" variant="hero" aria-label="Enviar">
+            <Button type="submit" size="icon" variant="hero" aria-label="Enviar" className="h-11 w-11 shrink-0" disabled={!input.trim()}>
               <Send className="h-4 w-4" />
             </Button>
           </form>

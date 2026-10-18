@@ -16,7 +16,7 @@ export const FinalCTA = () => (
         <span className="font-display text-5xl text-gradient-gold font-bold">{PRICE.today}</span>
       </div>
       <p className="mt-2 text-xs text-muted-foreground">{PRICE.installments}</p>
-      <Button size="xl" variant="hero" className="mt-8" asChild>
+      <Button size="xl" variant="hero" className="mt-8 w-full sm:w-auto px-5 sm:px-10" asChild>
         <a href={CHECKOUT_URL}>Quero Meu Ebook Agora</a>
       </Button>
       <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">

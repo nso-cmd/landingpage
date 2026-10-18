@@ -7,6 +7,7 @@ export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/SEU-LINK-AQUI";
 
 export const PRICE = {
   full: "R$ 239",
-  today: "R$ 39,90",
-  installments: "ou 12x de R$ 3,99",
+  today: "R$ 49,90",
+  installments: "Pix · Cartão · Boleto",
+  savings: "R$ 189,10",
 };

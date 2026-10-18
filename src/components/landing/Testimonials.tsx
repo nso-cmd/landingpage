@@ -14,9 +14,9 @@ export const Testimonials = () => (
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Depoimentos</p>
         <h2 className="mt-4 font-display text-2xl md:text-5xl font-bold">Quem aplicou, transformou</h2>
       </div>
-      <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="mt-8 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {testimonials.map((t) => (
-          <figure key={t.name} className="p-8 rounded-2xl bg-card-gradient gold-border flex flex-col hover:border-gold/50 transition-colors">
+          <figure key={t.name} className="min-w-0 p-5 md:p-6 rounded-lg bg-card-gradient gold-border flex flex-col hover:border-gold/50 transition-colors">
             <div className="flex gap-1 mb-4" aria-label="Avaliação 5 de 5 estrelas">
               {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
             </div>
@@ -30,7 +30,7 @@ export const Testimonials = () => (
               </div>
               <div className="min-w-0">
                 <div className="font-display text-base truncate">{t.name}</div>
-                <div className="text-xs text-muted-foreground truncate">{t.role} · Leitor verificado</div>
+                <div className="text-xs leading-relaxed text-muted-foreground">{t.role} · Leitor verificado</div>
               </div>
             </figcaption>
           </figure>
