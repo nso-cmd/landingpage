@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, MessageCircle, Mail, Download } from "lucide-react";
-import { WHATSAPP_GROUP_URL } from "@/config/checkout";
+import { CheckCircle2, Mail, Download } from "lucide-react";
+import { CHECKOUT_URL } from "@/config/checkout";
 
 const steps = [
   { icon: Mail, title: "Confirme seu e-mail", desc: "Acabamos de enviar o acesso ao ebook e bônus para o e-mail informado na compra." },
   { icon: Download, title: "Baixe seu material", desc: "Acesse o link de download e salve o material em seu dispositivo." },
-  { icon: MessageCircle, title: "Entre no grupo exclusivo", desc: "Continue sendo acompanhado com conteúdos extras, lives e tira-dúvidas no WhatsApp." },
 ];
 
 const Obrigado = () => (
@@ -21,7 +20,7 @@ const Obrigado = () => (
         Seu acesso já está sendo preparado.
       </p>
 
-      <div className="mt-12 grid md:grid-cols-3 gap-4 text-left">
+      <div className="mt-12 grid md:grid-cols-2 gap-4 text-left">
         {steps.map((s, i) => (
           <div key={s.title} className="p-6 rounded-2xl bg-card-gradient gold-border">
             <div className="flex items-center gap-3">
@@ -36,16 +35,9 @@ const Obrigado = () => (
         ))}
       </div>
 
-      <div className="mt-12 p-8 rounded-3xl bg-card-gradient border border-gold/60 shadow-gold">
-        <h2 className="font-display text-2xl md:text-3xl font-bold">Acesso ao grupo exclusivo</h2>
-        <p className="mt-3 text-muted-foreground">
-          Entre agora no grupo do WhatsApp e continue sendo acompanhado na sua jornada de crescimento digital.
-        </p>
-        <Button size="xl" variant="hero" className="mt-6" asChild>
-          <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noreferrer">
-            <MessageCircle className="h-5 w-5" />
-            Entrar no Grupo Exclusivo do WhatsApp
-          </a>
+      <div className="mt-12">
+        <Button size="xl" variant="hero" className="w-full sm:w-auto px-5 sm:px-10" asChild>
+          <a href={CHECKOUT_URL}>Voltar à página de compra</a>
         </Button>
       </div>
     </div>
