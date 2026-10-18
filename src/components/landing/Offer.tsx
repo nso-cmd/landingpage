@@ -13,8 +13,6 @@ const stack = [
 
 export const Offer = () => (
   <section id="comprar" className="py-16 md:py-24 bg-hero relative overflow-hidden">
-    <div className="absolute inset-0 opacity-40"
-      style={{ backgroundImage: "radial-gradient(circle at 50% 30%, hsl(var(--gold) / 0.18), transparent 60%)" }} />
     <div className="container mx-auto relative max-w-6xl">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Oferta completa</p>
@@ -26,43 +24,43 @@ export const Offer = () => (
         </p>
       </div>
 
-      <div className="mt-14 grid lg:grid-cols-[1.05fr_1fr] gap-10 items-center">
+      <div className="mt-8 md:mt-14 grid lg:grid-cols-[1.05fr_1fr] gap-8 md:gap-10 items-center">
         {/* Stack list */}
         <div className="space-y-3">
           {stack.map((s) => (
             <div
               key={s.title}
-              className={`flex items-center gap-4 p-4 md:p-5 rounded-xl bg-card-gradient transition-all ${
+              className={`flex items-center gap-3 md:gap-4 p-3 md:p-5 rounded-lg bg-card-gradient transition-all ${
                 s.highlight ? "border border-gold/60 shadow-gold" : "gold-border"
               }`}
             >
-              <div className="h-12 w-12 shrink-0 rounded-lg bg-gold-gradient flex items-center justify-center text-navy-deep">
+              <div className="h-10 w-10 md:h-12 md:w-12 shrink-0 rounded-lg bg-gold-gradient flex items-center justify-center text-navy-deep">
                 <s.icon className="h-6 w-6" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-[10px] uppercase tracking-widest text-gold">{s.tag}</div>
-                <div className="font-display text-base md:text-lg truncate">{s.title}</div>
+                <div className="font-display text-base md:text-lg leading-snug break-words">{s.title}</div>
               </div>
-              <div className="text-right">
+              <div className="text-right shrink-0">
                 <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Valor</div>
-                <div className="font-display text-lg text-gold">{s.value}</div>
+                <div className="font-display text-base md:text-lg text-gold whitespace-nowrap">{s.value}</div>
               </div>
             </div>
           ))}
 
-          <div className="mt-6 p-6 rounded-2xl bg-card-gradient border border-gold/60 shadow-gold">
+          <div className="mt-6 p-4 md:p-6 rounded-lg bg-card-gradient border border-gold/60 shadow-gold">
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Valor total do pacote</span>
               <span className="line-through text-muted-foreground">{PRICE.full}</span>
             </div>
-            <div className="mt-2 flex items-end justify-between gap-4">
+            <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
               <div>
                 <div className="text-xs uppercase tracking-widest text-gold">Hoje você investe</div>
                 <div className="font-display text-4xl md:text-5xl font-bold text-gradient-gold">{PRICE.today}</div>
                 <div className="text-xs text-muted-foreground mt-1">{PRICE.installments}</div>
               </div>
               <div className="rounded-full bg-gold/15 border border-gold/40 px-3 py-1 text-xs text-gold whitespace-nowrap">
-                Economize R$ 199,10
+                Economize {PRICE.savings}
               </div>
             </div>
           </div>
@@ -70,9 +68,8 @@ export const Offer = () => (
 
         {/* CTA card */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gold-gradient blur-3xl opacity-20 rounded-full" />
           <div className="relative flex flex-col items-center text-center">
-            <img src={ebookCover} alt="" width={1024} height={1536} loading="lazy" className="max-h-[380px] w-auto drop-shadow-2xl animate-float" />
+            <img src={ebookCover} alt="" width={1024} height={1536} loading="lazy" className="max-h-[240px] md:max-h-[380px] w-auto drop-shadow-2xl motion-safe:animate-float" />
             <Button size="xl" variant="hero" className="mt-8 w-full sm:w-auto" asChild>
               <a href={CHECKOUT_URL}>Quero Meu Ebook Agora</a>
             </Button>
