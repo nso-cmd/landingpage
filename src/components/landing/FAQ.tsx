@@ -15,11 +15,11 @@ export const FAQ = () => (
         <p className="text-gold uppercase tracking-[0.3em] text-xs">Dúvidas</p>
         <h2 className="mt-4 font-display text-2xl md:text-5xl font-bold">Perguntas frequentes</h2>
       </div>
-      <Accordion type="single" collapsible className="mt-12 space-y-3">
+      <Accordion type="single" collapsible className="mt-8 md:mt-12 space-y-3">
         {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`item-${i}`} className="rounded-xl bg-card-gradient gold-border px-6 border-b-0">
-            <AccordionTrigger className="text-left font-display text-lg hover:text-gold">{f.q}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
+          <AccordionItem key={i} value={`item-${i}`} className="rounded-lg bg-card-gradient gold-border px-4 md:px-6 border-b-0">
+            <AccordionTrigger className="gap-3 text-left font-display text-base md:text-lg hover:text-gold">{f.q}</AccordionTrigger>
+            <AccordionContent className="text-sm leading-relaxed text-muted-foreground">{f.a}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
