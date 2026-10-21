@@ -26,7 +26,7 @@ export const InlineCTA = ({
           </div>
         </div>
         <Button size="xl" variant="hero" className="w-full md:w-auto px-5 md:px-10" asChild>
-          <a href={CHECKOUT_URL}>{label}</a>
+          <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">{label}</a>
         </Button>
       </div>
     </div>

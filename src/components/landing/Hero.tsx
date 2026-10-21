@@ -36,7 +36,7 @@ export const Hero = () => {
           <div className="mt-5 lg:mt-8 flex flex-col gap-3">
             <p className="text-sm text-muted-foreground">Ebook + 4 bônus por <strong className="text-gold text-lg">{PRICE.today}</strong></p>
             <Button size="xl" variant="hero" className="w-full sm:w-fit px-5 sm:px-10" asChild>
-              <a href={CHECKOUT_URL}>Quero Meu Ebook Agora</a>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero Meu Ebook Agora</a>
             </Button>
             <div className="flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-muted-foreground">
               <ShieldCheck className="h-5 w-5 shrink-0 text-gold" />

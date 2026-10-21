@@ -17,7 +17,7 @@ export const FinalCTA = () => (
       </div>
       <p className="mt-2 text-xs text-muted-foreground">{PRICE.installments}</p>
       <Button size="xl" variant="hero" className="mt-8 w-full sm:w-auto px-5 sm:px-10" asChild>
-        <a href={CHECKOUT_URL}>Quero Meu Ebook Agora</a>
+        <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero Meu Ebook Agora</a>
       </Button>
       <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
         <span className="flex items-center gap-1.5"><Lock className="h-4 w-4 text-gold" /> Compra 100% segura</span>
