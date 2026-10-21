@@ -40,7 +40,7 @@ export const StickyCTA = () => {
           </div>
         </div>
         <Button size="default" variant="hero" className="ml-auto h-12 shrink-0 text-sm px-5 sm:text-base sm:px-6" asChild>
-          <a href={CHECKOUT_URL} tabIndex={show ? 0 : -1}>
+          <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" tabIndex={show ? 0 : -1}>
             <span className="sm:hidden">Quero agora</span>
             <span className="hidden sm:inline">Quero Meu Ebook Agora</span>
           </a>

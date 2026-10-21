@@ -71,7 +71,7 @@ export const Offer = () => (
           <div className="relative flex flex-col items-center text-center">
             <img src={ebookCover} alt="" width={1024} height={1536} loading="lazy" className="max-h-[240px] md:max-h-[380px] w-auto drop-shadow-2xl motion-safe:animate-float" />
             <Button size="xl" variant="hero" className="mt-8 w-full sm:w-auto" asChild>
-              <a href={CHECKOUT_URL}>Quero Meu Ebook Agora</a>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero Meu Ebook Agora</a>
             </Button>
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
               <span className="flex items-center gap-2"><Lock className="h-4 w-4 text-gold" /> Pagamento seguro</span>
